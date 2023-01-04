@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "changelogDate": "20221229033812",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "plant",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "location",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datePlant",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "waterPerHour",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Plant",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "comments",
+      "otherEntityRelationshipName": "plant",
+      "relationshipName": "comments",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
